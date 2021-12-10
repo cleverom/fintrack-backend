@@ -11,7 +11,6 @@ jobs:
     working_directory: ~/fintrack-service
     # steps:
     steps:
-      set -e
       - checkout
       - sonarcloud/scan
         # name: Install dependencies
@@ -29,7 +28,9 @@ jobs:
 
       - run:
           name: Install dependencies
-          command: npm install
+          command: |
+          set -e
+          npm install
       - run:
           name: Compile Typescript Source
           command: npm run build
