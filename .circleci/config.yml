@@ -15,8 +15,8 @@ jobs:
       - sonarcloud/scan
         # name: Install dependencies
       - sonarscanner/check-code-quality
-      sonar.project_key: ${project_key}
-      sonar.organization: ${organization}
+      # sonar.projectKey: ${project_key}
+      # sonar.organization: ${organization}
 
   build:
     working_directory: ~/fintrack-service
