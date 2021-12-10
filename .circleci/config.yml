@@ -8,9 +8,11 @@ jobs:
       # replace with your preferred image
       - image: cimg/openjdk:11.0.12
     working_directory: ~/fintrack-service
+    environment:
+        sonar.projectKey: ${project_key}
+        sonar.organization: ${organization}
     steps:
       # - checkout
-      # - chmod +x .../sonarscanner@0.0.4-linux/jre/bin/java
       - sonarscanner/check-code-quality
 
   build:
