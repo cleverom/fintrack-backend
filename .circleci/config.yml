@@ -30,8 +30,6 @@ jobs:
       - run:
           name: Compile Typescript Source
           command: npm run build
-# orbs:
-# sonarcloud: sonarsource/sonarcloud@1.0.3
 
 workflows:
   version: 2.1
