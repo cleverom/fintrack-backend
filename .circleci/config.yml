@@ -6,8 +6,12 @@ jobs:
     executor:
       name: node/default
       tag: '10.4'
-    steps:
+     steps:
       - checkout
-          steps:
-            - run: npm install
-      - run: npm run build
+
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Compile Typescript Source
+          command: npm run build
