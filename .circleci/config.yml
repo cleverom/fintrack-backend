@@ -11,10 +11,10 @@ jobs:
     steps:
       # - checkout
       # - chmod +x .../sonarscanner@0.0.4-linux/jre/bin/java
+      - sonarscanner/check-code-quality
       - run:
           name: checking current path
           command: which java
-      - sonarscanner/check-code-quality
 
   build:
     working_directory: ~/fintrack-service
