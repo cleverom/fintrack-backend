@@ -9,7 +9,7 @@ jobs:
       - image: cimg/base:stable
     working_directory: ~/fintrack-service
     steps:
-      - checkout
+      # - checkout
       - sonarscanner/check-code-quality
 
   build:
