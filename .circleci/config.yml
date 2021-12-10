@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@4.7.0
   sonarscanner: psl/sonarscanner@0.0.4
-  sonarcloud: sonarsource/sonarcloud@1.0.3
+  # sonarcloud: sonarsource/sonarcloud@1.0.3
 jobs:
   build:
     working_directory: ~/fintrack-service
@@ -21,21 +21,21 @@ jobs:
 
   test:
   
-    # docker:
+    docker:
       # replace with your preferred image
-      # - image: cimg/base:stable
+      - image: cimg/base:stable
     # steps:
     steps:
-      - checkout
-      - sonarcloud/scan
+      # - checkout
+      # - sonarcloud/scan
       - sonarscanner/check-code-quality
 # orbs:
   # sonarcloud: sonarsource/sonarcloud@1.0.3
 
-workflows:
-  main:
-    jobs:
-      - build:
-          context: sonarcloud
+# workflows:
+#   main:
+#     jobs:
+#       - build:
+#           context: sonarcloud
 
 
