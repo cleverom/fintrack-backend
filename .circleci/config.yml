@@ -33,9 +33,9 @@ jobs:
 # orbs:
 # sonarcloud: sonarsource/sonarcloud@1.0.3
 
-# workflows:
-#   main:
-#     jobs:
-#       - build:
-#           context: sonarcloud
-
+workflows:
+  version: 2.1
+  build_and_test:
+    jobs:
+      - test
+      - build
