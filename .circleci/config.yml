@@ -8,10 +8,6 @@ jobs:
       - image: circleci/node:erbiumefault
     steps:
       - checkout
-            - run:
-          name: Install dependencies
-          command: |
-          
-            npm install
-            npm run build
+            - run: npm install
+            - run: npm run build
 
