@@ -20,10 +20,10 @@ jobs:
           command: npm run build
 
   test:
-    working_directory: ~/fintrack-service
     docker:
       # replace with your preferred image
       - image: cimg/base:stable
+    working_directory: ~/fintrack-service
     # steps:
     steps:
       - checkout
