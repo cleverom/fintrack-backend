@@ -13,6 +13,11 @@ jobs:
         sonar.organization: ${organization}
     steps:
       # - checkout
+      # - run:
+      #     name: add scanner properties
+      #     command: |
+      #       cd /fintrack-service/sonar-scanner-4.2.0.1873/conf/sonar-scanner.properties
+            
       - sonarscanner/check-code-quality
 
   build:
