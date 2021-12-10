@@ -11,9 +11,6 @@ jobs:
     steps:
       # - checkout
       # - chmod +x .../sonarscanner@0.0.4-linux/jre/bin/java
-      # - run:
-      #     name: checking current path
-      #     command: JAVA_HOME=/usr/bin/java
       - sonarscanner/check-code-quality
 
   build:
