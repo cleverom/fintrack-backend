@@ -20,9 +20,9 @@ jobs:
 
 test:
   
-    docker:
-      replace with your preferred image
-      - image: cimg/base:stable
+    # docker:
+      # replace with your preferred image
+      # - image: cimg/base:stable
     # steps:
     #   - sonarscanner/check-code-quality
     steps:
