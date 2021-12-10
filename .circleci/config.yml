@@ -6,15 +6,15 @@ jobs:
   test:
     docker:
       # replace with your preferred image
-      - image: cimg/base:stable
+      - image: cimg/openjdk:11.0.12
     working_directory: ~/fintrack-service
     steps:
       # - checkout
       # - chmod +x .../sonarscanner@0.0.4-linux/jre/bin/java
+      # - run:
+      #     name: checking current path
+      #     command: JAVA_HOME=/usr/bin/java
       - sonarscanner/check-code-quality
-      - run:
-          name: checking current path
-          command: JAVA_HOME=/usr/bin/java
 
   build:
     working_directory: ~/fintrack-service
