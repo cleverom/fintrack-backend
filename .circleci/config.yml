@@ -3,9 +3,9 @@ orbs:
   node: circleci/node@4.7.0
 jobs:
   build:
-    executor:
-      name: node/default
-      tag: '10.4'
+    working_directory: ~/fintrack-service
+    docker:
+      - image: cimg/node:14.17
      steps:
       - checkout
 
