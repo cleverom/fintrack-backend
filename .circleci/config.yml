@@ -17,4 +17,25 @@ jobs:
       - run:
           name: Compile Typescript Source
           command: npm run build
+<<<<<<< HEAD
+  testquality:
+  
+    docker:
+      replace with your preferred image
+      - image: cimg/base:stable
+    # steps:
+    #   - sonarscanner/check-code-quality
+    steps:
+      - checkout
+      - sonarcloud/scan
+orbs:
+  sonarcloud: sonarsource/sonarcloud@1.0.3
+
+workflows:
+  main:
+    jobs:
+      - build:
+          context: sonarcloud
+=======
+>>>>>>> 3ef360220f8d994eb243d57bec2f6242b84d72f3
 
