@@ -27,7 +27,6 @@ jobs:
     steps:
       # - checkout
       # - sonarcloud/scan
-      - run:
           name: Install dependencies
         - sonarscanner/check-code-quality
 # orbs:
