@@ -17,7 +17,6 @@ jobs:
       - run:
           name: Compile Typescript Source
           command: npm run build
-<<<<<<< HEAD
   testquality:
   
     docker:
@@ -36,6 +35,5 @@ workflows:
     jobs:
       - build:
           context: sonarcloud
-=======
->>>>>>> 3ef360220f8d994eb243d57bec2f6242b84d72f3
+
 
