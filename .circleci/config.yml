@@ -5,10 +5,13 @@ jobs:
   build:
     working_directory: ~/fintrack-service
     docker:
-            - image: circleci/node:erbiumefault
+      - image: circleci/node:erbiumefault
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-      - run: npm run test
+            - run:
+          name: Install dependencies
+          command: |
+          
+            npm install
+            npm run build
+
