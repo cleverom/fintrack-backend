@@ -19,7 +19,7 @@ jobs:
           name: Compile Typescript Source
           command: npm run build
 
-test:
+  test:
   
     # docker:
       # replace with your preferred image
