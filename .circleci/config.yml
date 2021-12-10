@@ -5,13 +5,13 @@ orbs:
   sonarcloud: sonarsource/sonarcloud@1.0.3
 jobs:
   test:
-    override:
     docker:
       # replace with your preferred image
       - image: cimg/base:stable
     working_directory: ~/fintrack-service
     # steps:
     steps:
+      set -e
       - checkout
       - sonarcloud/scan
         # name: Install dependencies
