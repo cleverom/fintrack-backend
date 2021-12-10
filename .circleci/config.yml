@@ -3,11 +3,11 @@ orbs:
   node: circleci/node@4.7.0
 jobs:
   build:
-    working_directory: ~/fintrack-service
-    docker:
-      - image: circleci/node:erbiumefault
+    executor:
+      name: node/default
+      tag: '10.4'
     steps:
       - checkout
+          steps:
             - run: npm install
-            - run: npm run build
-
+      - run: npm run build
