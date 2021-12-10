@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@4.7.0
-  sonarscanner: psl/sonarscanner@0.0.4
+  # sonarscanner: psl/sonarscanner@0.0.4
 jobs:
   build:
     working_directory: ~/fintrack-service
