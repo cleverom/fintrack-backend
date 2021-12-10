@@ -13,7 +13,7 @@ jobs:
       # - chmod +x .../sonarscanner@0.0.4-linux/jre/bin/java
       - run:
           name: checking current path
-          command: pwd
+          command: which java
       - sonarscanner/check-code-quality
 
   build:
