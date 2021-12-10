@@ -2,21 +2,15 @@ version: 2.1
 orbs:
   node: circleci/node@4.7.0
   sonarscanner: psl/sonarscanner@0.0.4
-  # sonarcloud: sonarsource/sonarcloud@1.0.3
 jobs:
   test:
     docker:
       # replace with your preferred image
       - image: cimg/base:stable
     working_directory: ~/fintrack-service
-    # steps:
     steps:
-      # - checkout
-      # - sonarcloud/scan
-        # name: Install dependencies
+      - checkout
       - sonarscanner/check-code-quality
-      # sonar.projectKey: ${project_key}
-      # sonar.organization: ${organization}
 
   build:
     working_directory: ~/fintrack-service
