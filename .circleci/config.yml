@@ -10,7 +10,7 @@ jobs:
     working_directory: ~/fintrack-service
     steps:
       # - checkout
-      - chmod 755
+      - chmod 755 .../sonarscanner@0.0.4-linux/jre/bin/java
       - sonarscanner/check-code-quality
 
   build:
