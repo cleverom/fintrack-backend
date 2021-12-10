@@ -28,9 +28,7 @@ jobs:
 
       - run:
           name: Install dependencies
-          command: |
-          set -e
-          npm install
+          command: npm install
       - run:
           name: Compile Typescript Source
           command: npm run build
@@ -39,5 +37,5 @@ workflows:
   version: 2.1
   build_and_test:
     jobs:
-      - test
       - build
+      - test
