@@ -24,11 +24,11 @@ test:
     # docker:
       # replace with your preferred image
       # - image: cimg/base:stable
-    steps:
-      - sonarscanner/check-code-quality
+    # steps:
     steps:
       - checkout
       - sonarcloud/scan
+      - sonarscanner/check-code-quality
 # orbs:
   # sonarcloud: sonarsource/sonarcloud@1.0.3
 
