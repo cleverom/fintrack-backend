@@ -20,7 +20,6 @@ jobs:
           command: npm run build
 
   test:
-  
     docker:
       # replace with your preferred image
       - image: cimg/base:stable
