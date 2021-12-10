@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@4.7.0
-  sonarscanner: psl/sonarscanner@0.0.4
+  # sonarscanner: psl/sonarscanner@0.0.4
 jobs:
   build:
     working_directory: ~/fintrack-service
@@ -17,14 +17,14 @@ jobs:
       - run:
           name: Compile Typescript Source
           command: npm run build
-  testquality:
-  check for quality:
-    docker:
+  # testquality:
+  # check for quality:
+    # docker:
       # replace with your preferred image
-      - image: cimg/base:stable
-    steps:
-      - sonarscanner/check-code-quality
-workflows:
-  example-workflow:
-    jobs:
-      - example-job
+      # - image: cimg/base:stable
+    # steps:
+      # - sonarscanner/check-code-quality
+# workflows:
+#   example-workflow:
+#     jobs:
+#       - example-job
