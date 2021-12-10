@@ -17,11 +17,11 @@ jobs:
       - run:
           name: Compile Typescript Source
           command: npm run build
-  testquality:
+  # testquality:
     # check for quality:
-    docker:
+    # docker:
       # replace with your preferred image
-      - image: cimg/base:stable
-    steps:
-      - sonarscanner/check-code-quality
+      # - image: cimg/base:stable
+    # steps:
+      # - sonarscanner/check-code-quality
 
