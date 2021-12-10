@@ -13,7 +13,7 @@ jobs:
         sonar.organization: ${organization}
     steps:
       # - checkout
-      - sonarscanner/check-code-quality
+      - sonarscanner/check-code-quality -X
 
   build:
     working_directory: ~/fintrack-service
