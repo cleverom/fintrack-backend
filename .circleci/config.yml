@@ -21,6 +21,7 @@ jobs:
 
   test:
     docker:
+      working_directory: ~/fintrack-service
       # replace with your preferred image
       - image: cimg/base:stable
     # steps:
