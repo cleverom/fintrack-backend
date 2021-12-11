@@ -12,13 +12,13 @@ jobs:
     #     sonar.projectKey: ${project_key}
     #     sonar.organization: ${organization}
     steps:
-      # - checkout
-      - run: 
-          name: add scanner properties
-          command: |
-            exec /bin/bash
-            -Dsonar.organization=${project_key}
-            -Dsonar.projectKey=${organization}
+      - checkout
+      # - run: 
+      #     name: add scanner properties
+      #     command: |
+      #       exec /bin/bash
+      #       -Dsonar.organization=${project_key}
+      #       -Dsonar.projectKey=${organization}
       #       cd /fintrack-service/sonar-scanner-4.2.0.1873/conf/sonar-scanner.properties
             
       - sonarscanner/check-code-quality
