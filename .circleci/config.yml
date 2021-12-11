@@ -13,7 +13,7 @@ jobs:
     #     sonar.organization: ${organization}
     steps:
       # - checkout
-      - run:
+      - run: >
           name: add scanner properties
             -Dsonar.organization=${project_key}
             -Dsonar.projectKey=${organization}
