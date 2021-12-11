@@ -32,9 +32,8 @@ workflows:
   build_and_test:
     jobs:
       - test
-        name: code-quality
-        
+          name: code-quality  
       - build
-        name: build-fintrack
-        requires:
-          - code-quality
+          name: build-fintrack
+          requires:
+            - code-quality
