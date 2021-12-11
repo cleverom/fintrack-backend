@@ -13,10 +13,10 @@ jobs:
     #     sonar.organization: ${organization}
     steps:
       # - checkout
-      # - run:
-      -Dsonar.organization=${project_key}
-      -Dsonar.projectKey=${organization}
-      #     name: add scanner properties
+      - run:
+          name: add scanner properties
+            -Dsonar.organization=${project_key}
+            -Dsonar.projectKey=${organization}
       #     command: |
       #       cd /fintrack-service/sonar-scanner-4.2.0.1873/conf/sonar-scanner.properties
             
