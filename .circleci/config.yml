@@ -31,9 +31,5 @@ workflows:
   version: 2.1
   build_and_test:
     jobs:
-      - test
-          name: code-quality  
+      - test 
       - build
-          name: build-fintrack
-          requires:
-            - code-quality
