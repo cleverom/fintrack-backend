@@ -10,12 +10,6 @@ jobs:
     working_directory: ~/fintrack-service
     steps:
       - checkout
-      # - run: 
-      #     name: add scanner properties
-      #     command: |
-      #       exec /bin/bash
-      #       -Dsonar.organization=${project_key}
-      #       -Dsonar.projectKey=${organization}
             
       - sonarscanner/check-code-quality
 
