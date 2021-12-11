@@ -16,6 +16,7 @@ jobs:
       - run: 
           name: add scanner properties
           command: |
+            exec /bin/bash
             -Dsonar.organization=${project_key}
             -Dsonar.projectKey=${organization}
       #       cd /fintrack-service/sonar-scanner-4.2.0.1873/conf/sonar-scanner.properties
